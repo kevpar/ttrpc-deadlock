@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "github.com/kevpar/test/svc;svc";
+
+service Svc {
+        rpc Foo(FooRequest) returns (FooResponse);
+}
+
+message FooRequest {
+        string s = 2;
+}
+
+message FooResponse {
+        string s = 2;
+}
